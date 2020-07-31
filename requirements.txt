@@ -1,5 +1,5 @@
 asn1crypto==0.24.0
-cryptography==2.1.4
+cryptography==2.3
 enum34==1.1.10
 future==0.18.2
 futures==3.3.0
