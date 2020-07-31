@@ -1,0 +1,13 @@
+{% extends "template.html"%}
+
+{% block title %} detials {% endblock %}
+  {% block body %}
+    <h1>flight detials</h1>
+      <p>this flight comes from {{flight.origin}} to {{flight.destination}} and takes {{flight.duration}} minutes </p>
+    <h3>passenger</h3>
+    <ul>
+      {% for passenger in passengers %}
+        <li >{{passenger.name}}</li>
+        {% endfor %}
+    </ul>
+  {% endblock %}

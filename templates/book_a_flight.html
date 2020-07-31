@@ -1,0 +1,24 @@
+
+{% extends "template.html"%}
+
+{% block title %}book a flight {% endblock %}
+{% block body %}
+<form action="{{url_for('book')}}" method="POST" >
+  <div class="form-group">
+    <label for="id">flights</label>
+    <select type="text" class="form-control" name="id" >
+      {% for flight in flights %}
+        <option value="{{flight.id}}">{{flight.origin}} to {{flight.destination}}</option>
+      {% endfor %}
+    </select>
+    <small id="flightHelp" class="form-text text-muted">this procces is private.</small>
+  </div>
+  <div class="form-group">
+    <label for="name">your name</label>
+    <input type="text" class="form-control" id="name" name="name"  placeholder="Enter your name!">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <br><a href="{{url_for('detials')}}">more info</a>
+</form>
+
+    {% endblock %}
